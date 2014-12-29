@@ -10,9 +10,12 @@
 
 include "../inc/init.php";
 
+$newurl = "";
+
 if(!$user->isAdmin()) {
-    header("Location: $set->url");
-    exit;
+    echo "<script type='text.javascript'>
+            window.location('$newurl');
+          </script>";
 }
 
 
